@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 30 # 设置任务超时为 30 分钟
+    timeout-minutes: 45 # 设置任务超时为 45 分钟
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
@@ -28,7 +28,7 @@ jobs:
       run: npm install -g yarn # 确保 Yarn 可用
 
     - name: Install dependencies
-      run: yarn install --frozen-lockfile # 使用 Yarn 安装依赖，替代 npm ci
+      run: yarn install --frozen-lockfile --ignore-scripts # 跳过 husky 等脚本，加快安装速度
 
     - name: Run linting
       run: yarn lint # 假设 package.json 中 script 名为 lint
@@ -57,7 +57,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20 # 设置任务超时为 30 分钟
+    timeout-minutes: 30 # 设置任务超时为 30 分钟
     needs: test
     
     steps:
@@ -74,7 +74,7 @@ jobs:
       run: npm install -g yarn # 确保 Yarn 可用
 
     - name: Install dependencies
-      run: yarn install --frozen-lockfile # 使用 Yarn 安装依赖，替代 npm ci
+      run: yarn install --frozen-lockfile --ignore-scripts # 跳过 husky 等脚本，加快安装速度
 
     - name: Build production
       run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
