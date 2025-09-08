@@ -22,13 +22,16 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'yarn' # 更改缓存为 Yarn
+        cache: 'yarn'
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Install Yarn
       run: npm install -g yarn # 确保 Yarn 可用
 
     - name: Install dependencies
-      run: yarn install --frozen-lockfile --ignore-scripts # 跳过 husky 等脚本，加快安装速度
+      run: |
+        yarn config set network-timeout 300000
+        yarn install --frozen-lockfile --network-timeout 300000
 
     - name: Run linting
       run: yarn lint # 假设 package.json 中 script 名为 lint
@@ -68,13 +71,16 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
-        cache: 'yarn' # 更改缓存为 Yarn
+        cache: 'yarn'
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Install Yarn
       run: npm install -g yarn # 确保 Yarn 可用
 
     - name: Install dependencies
-      run: yarn install --frozen-lockfile --ignore-scripts # 跳过 husky 等脚本，加快安装速度
+      run: |
+        yarn config set network-timeout 300000
+        yarn install --frozen-lockfile --network-timeout 300000
 
     - name: Build production
       run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
