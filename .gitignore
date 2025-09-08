@@ -62,7 +62,7 @@ cypress/screenshots/
 # Package managers
 .npm
 .yarn-integrity
-yarn.lock
+# yarn.lock
 package-lock.json
 
 # Webpack bundle analyzer
