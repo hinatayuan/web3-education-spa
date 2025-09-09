@@ -17,6 +17,7 @@ interface CourseCardProps {
 }
 
 export const CourseCard = ({ course }: CourseCardProps) => {
+  // 测试代码走读提交
   const { address } = useAccount();
   const [approving, setApproving] = useState(false);
 
