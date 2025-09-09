@@ -57,7 +57,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
 
   const handleApprove = async () => {
     if (!address || isCreator || hasPurchased || isProcessing) return;
-    
+
     try {
       setApproving(true);
       setIsProcessing(true);
@@ -71,7 +71,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
 
   const handlePurchase = async () => {
     if (!address || hasPurchased || isCreator || isProcessing) return;
-    
+
     try {
       setIsProcessing(true);
       await purchaseCourse(course.courseId);
