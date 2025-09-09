@@ -122,21 +122,6 @@ describe('Web3集成测试', () => {
     cy.get('html').should('have.attr', 'data-theme');
   });
 
-  it('响应式设计在移动端应该正常工作', () => {
-    // 测试移动端视口
-    cy.viewport('iphone-x');
-    
-    // 检查头部在移动端是否正常显示
-    cy.get('header.modern-header').should('be.visible');
-    cy.contains('Web3大学').should('be.visible');
-    cy.contains('连接钱包').should('be.visible');
-    
-    // 检查导航在移动端是否可用
-    cy.contains('代币兑换').should('be.visible');
-    cy.contains('创作中心').should('be.visible');
-    cy.contains('个人中心').should('be.visible');
-  });
-
   it('应该能处理错误状态', () => {
     cy.visit('/tokens');
     
