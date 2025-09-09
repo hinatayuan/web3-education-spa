@@ -17,6 +17,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取完整的git历史
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -25,19 +27,20 @@ jobs:
         cache: 'yarn'
         registry-url: 'https://registry.npmjs.org'
 
-    - name: Install Yarn
-      run: npm install -g yarn # 确保 Yarn 可用
+    # 暂时注释掉其他步骤，只测试AI代码走读
+    # - name: Install Yarn
+    #   run: npm install -g yarn # 确保 Yarn 可用
 
-    - name: Install dependencies
-      run: |
-        yarn config set network-timeout 300000
-        yarn install --network-timeout 300000
+    # - name: Install dependencies
+    #   run: |
+    #     yarn config set network-timeout 300000
+    #     yarn install --network-timeout 300000
 
-    - name: Run linting
-      run: yarn lint # 假设 package.json 中 script 名为 lint
+    # - name: Run linting
+    #   run: yarn lint # 假设 package.json 中 script 名为 lint
 
-    - name: TypeScript type check
-      run: yarn tsc --noEmit # 使用 Yarn 调用 tsc
+    # - name: TypeScript type check
+    #   run: yarn tsc --noEmit # 使用 Yarn 调用 tsc
 
     - name: AI Code Review
       run: |
@@ -49,15 +52,19 @@ jobs:
         
         # 获取变更的文件列表
         if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-          BASE_SHA=${{ github.event.pull_request.base.sha }}
-          HEAD_SHA=${{ github.event.pull_request.head.sha }}
+          # PR事件：比较目标分支
+          BASE_BRANCH="${{ github.event.pull_request.base.ref }}"
+          git fetch origin "$BASE_BRANCH"
+          CHANGED_FILES=$(git diff --name-only --diff-filter=AMR origin/"$BASE_BRANCH"...HEAD | grep -E '\.(js|ts|jsx|tsx)$' || true)
         else
-          BASE_SHA=$(git rev-parse HEAD~1)
-          HEAD_SHA=$(git rev-parse HEAD)
+          # Push事件：比较上一次提交
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD~1..HEAD | grep -E '\.(js|ts|jsx|tsx)$' || true)
+          else
+            # 首次提交，获取所有文件
+            CHANGED_FILES=$(git ls-files | grep -E '\.(js|ts|jsx|tsx)$' || true)
+          fi
         fi
-        
-        # 获取变更的代码文件（仅包含 .js, .ts, .jsx, .tsx 文件）
-        CHANGED_FILES=$(git diff --name-only --diff-filter=AMR $BASE_SHA..$HEAD_SHA | grep -E '\.(js|ts|jsx|tsx)$' || true)
         
         if [ -z "$CHANGED_FILES" ]; then
           echo "📝 没有发现需要审查的代码文件"
@@ -73,7 +80,16 @@ jobs:
             echo "🔍 正在审查文件: $file"
             
             # 获取文件差异内容
-            DIFF_CONTENT=$(git diff $BASE_SHA..$HEAD_SHA -- "$file" || true)
+            if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+              DIFF_CONTENT=$(git diff origin/"$BASE_BRANCH"...HEAD -- "$file" || true)
+            else
+              if git rev-parse HEAD~1 >/dev/null 2>&1; then
+                DIFF_CONTENT=$(git diff HEAD~1..HEAD -- "$file" || true)
+              else
+                # 首次提交，显示整个文件内容
+                DIFF_CONTENT=$(cat "$file" || true)
+              fi
+            fi
             
             if [ ! -z "$DIFF_CONTENT" ]; then
               # 构造审查请求
@@ -117,77 +133,78 @@ jobs:
           head -50 /tmp/code-review/review-${{ github.run_id }}.md
         fi
 
-    - name: Run unit tests
-      run: yarn test:unit # 假设 package.json 中 script 名为 test:unit
+    # 暂时注释掉其他测试步骤，只测试AI代码走读
+    # - name: Run unit tests
+    #   run: yarn test:unit # 假设 package.json 中 script 名为 test:unit
 
-    - name: Start development server
-      run: |
-        yarn client:server &
-        sleep 30 # 保持原逻辑，启动开发服务器并等待
+    # - name: Start development server
+    #   run: |
+    #     yarn client:server &
+    #     sleep 30 # 保持原逻辑，启动开发服务器并等待
 
-    - name: Run e2e tests
-      run: yarn test:e2e # 假设 package.json 中 script 名为 test:e2e
+    # - name: Run e2e tests
+    #   run: yarn test:e2e # 假设 package.json 中 script 名为 test:e2e
 
+    # - name: Upload test coverage
+    #   uses: codecov/codecov-action@v4
+    #   with:
+    #     directory: ./docs/jest-coverage
+    #     fail_ci_if_error: true
+    #   env:
+    #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-    - name: Upload test coverage
-      uses: codecov/codecov-action@v4
-      with:
-        directory: ./docs/jest-coverage
-        fail_ci_if_error: true
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+  # 暂时注释掉build和deploy，只测试AI代码走读
+  # build:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 30 # 设置任务超时为 30 分钟
+  #   needs: test
+  #   
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
 
-  build:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30 # 设置任务超时为 30 分钟
-    needs: test
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+  #   - name: Use Node.js 20.x
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: 20.x
+  #       cache: 'yarn'
+  #       registry-url: 'https://registry.npmjs.org'
 
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20.x
-        cache: 'yarn'
-        registry-url: 'https://registry.npmjs.org'
+  #   - name: Install Yarn
+  #     run: npm install -g yarn # 确保 Yarn 可用
 
-    - name: Install Yarn
-      run: npm install -g yarn # 确保 Yarn 可用
+  #   - name: Install dependencies
+  #     run: |
+  #       yarn config set network-timeout 300000
+  #       yarn install --frozen-lockfile --network-timeout 300000
 
-    - name: Install dependencies
-      run: |
-        yarn config set network-timeout 300000
-        yarn install --frozen-lockfile --network-timeout 300000
+  #   - name: Build production
+  #     run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
 
-    - name: Build production
-      run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
+  #   - name: Upload build artifacts
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: dist
+  #       path: dist/
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: dist
-        path: dist/
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   if: github.ref == 'refs/heads/main'
+  #   
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+  #   - name: Download build artifacts
+  #     uses: actions/download-artifact@v4
+  #     with:
+  #       name: dist
+  #       path: dist/
 
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: dist
-        path: dist/
-
-    - name: Deploy to Cloudflare Pages
-      uses: cloudflare/wrangler-action@v3
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+  #   - name: Deploy to Cloudflare Pages
+  #     uses: cloudflare/wrangler-action@v3
+  #     with:
+  #       apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  #       accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  #       command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
