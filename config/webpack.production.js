@@ -2,6 +2,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   output: {
@@ -30,11 +31,16 @@ module.exports = {
   },
   //用公司现有的组件库 公司自建CDN 上线CI机器压缩
   //优化项目的构建速度 一半在服务器上 一半在本地开发模式上
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
+  // externals: {
+  //   react: 'React',
+  //   'react-dom': 'ReactDOM',
+  // },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
     new HtmlWebpackPlugin({
       title: 'YD AI SPA - Web3大学',
       filename: 'index.html',
