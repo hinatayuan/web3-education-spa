@@ -100,11 +100,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # - name: Download build artifacts
-    #   uses: actions/download-artifact@v4
-    #   with:
-    #     name: dist
-    #     path: dist/
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: dist
+        path: dist/
 
     - name: Deploy to Cloudflare Pages
       uses: cloudflare/wrangler-action@v3
