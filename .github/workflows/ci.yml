@@ -92,13 +92,44 @@ jobs:
             fi
             
             if [ ! -z "$DIFF_CONTENT" ]; then
-              # 构造审查请求
-              REQUEST_BODY=$(jq -n --arg content "请审查以下代码变更：
+              # 检查是否只是注释变更
+              COMMENT_ONLY_CHANGE=$(echo "$DIFF_CONTENT" | grep -E '^[+\-]' | grep -v -E '^[+\-].*//.*[^/]' | grep -v -E '^[+\-].*\*.*[^*]' | wc -l | tr -d ' ')
+              TOTAL_CHANGES=$(echo "$DIFF_CONTENT" | grep -E '^[+\-]' | wc -l | tr -d ' ')
+              
+              # 获取文件的完整内容作为上下文
+              FULL_CONTENT=$(cat "$file" 2>/dev/null || echo "无法读取文件内容")
+              
+              # 根据变更类型构造不同的审查请求
+              if [ "$COMMENT_ONLY_CHANGE" -eq 0 ] && [ "$TOTAL_CHANGES" -le 3 ]; then
+                # 仅注释变更的简化请求
+                REQUEST_BODY=$(jq -n --arg content "请简要审查以下注释变更：
 
-        文件: $file
+        📁 文件: $file
 
-        变更内容:
-        $DIFF_CONTENT" '{"messages": [{"role": "user", "content": $content}]}')
+        🔄 变更内容:
+        \`\`\`diff
+        $DIFF_CONTENT
+        \`\`\`
+
+        这似乎是注释相关的变更，请简要确认注释内容是否合适。" '{"messages": [{"role": "user", "content": $content}]}')
+              else
+                # 完整的代码审查请求
+                REQUEST_BODY=$(jq -n --arg content "请审查以下代码变更：
+
+        📁 文件路径: $file
+
+        🔄 变更内容 (diff):
+        \`\`\`diff
+        $DIFF_CONTENT
+        \`\`\`
+
+        📋 完整文件内容 (用于上下文参考):
+        \`\`\`typescript
+        $FULL_CONTENT
+        \`\`\`
+
+        请重点关注变更的部分，并结合完整代码上下文进行审查。" '{"messages": [{"role": "user", "content": $content}]}')
+              fi
               
               # 调用AI代码审查API
               RESPONSE=$(curl -s -X POST \

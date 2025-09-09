@@ -17,9 +17,9 @@ interface CourseCardProps {
 }
 
 export const CourseCard = ({ course }: CourseCardProps) => {
-  // 测试代码走读提交123
   const { address } = useAccount();
   const [approving, setApproving] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const { hasPurchased, refetchPurchaseStatus } = useHasUserPurchasedCourse(
     course.courseId,
@@ -55,21 +55,37 @@ export const CourseCard = ({ course }: CourseCardProps) => {
   // 判断是否可以购买（已授权且未购买且非作者）
   const canPurchase = !isCreator && !hasPurchased && allowance >= course.price;
 
-  const handleApprove = () => {
-    if (!address || isCreator || hasPurchased) return;
-    setApproving(true);
-    approve(COURSE_MANAGER_CONTRACT_ADDRESS, course.price);
+  const handleApprove = async () => {
+    if (!address || isCreator || hasPurchased || isProcessing) return;
+    
+    try {
+      setApproving(true);
+      setIsProcessing(true);
+      await approve(COURSE_MANAGER_CONTRACT_ADDRESS, course.price);
+    } catch (error) {
+      console.error('Approval failed:', error);
+      setApproving(false);
+      setIsProcessing(false);
+    }
   };
 
-  const handlePurchase = () => {
-    if (!address || hasPurchased || isCreator) return;
-    purchaseCourse(course.courseId);
+  const handlePurchase = async () => {
+    if (!address || hasPurchased || isCreator || isProcessing) return;
+    
+    try {
+      setIsProcessing(true);
+      await purchaseCourse(course.courseId);
+    } catch (error) {
+      console.error('Purchase failed:', error);
+      setIsProcessing(false);
+    }
   };
 
   // 当approval成功后，重置状态并刷新allowance
   useEffect(() => {
     if (approving && approveIsConfirmed) {
       setApproving(false);
+      setIsProcessing(false);
       // 延时刷新allowance数据
       setTimeout(() => {
         refetchAllowance();
@@ -82,6 +98,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
     if (purchaseIsConfirmed) {
       // 立即更新本地用户数据
       addPurchasedCourse(course.courseId);
+      setIsProcessing(false);
 
       // 延时刷新购买状态和余额，确保链上状态已更新
       setTimeout(() => {
@@ -133,7 +150,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
               <div className="approval-step">
                 <button
                   onClick={handleApprove}
-                  disabled={approveIsPending || approveIsConfirming}
+                  disabled={approveIsPending || approveIsConfirming || isProcessing}
                   className="approve-btn"
                 >
                   {approveIsPending
@@ -149,7 +166,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
             ) : canPurchase ? (
               <button
                 onClick={handlePurchase}
-                disabled={purchaseIsPending || purchaseIsConfirming}
+                disabled={purchaseIsPending || purchaseIsConfirming || isProcessing}
                 className="purchase-btn"
               >
                 {purchaseIsPending
