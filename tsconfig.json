@@ -28,7 +28,6 @@
       "@connections/*": ["src/connections/*"]
     }
   },
-
   "include": ["src", "tests"],
   "exclude": ["demo/**/*", "tests/**/*", "cypress/**/*"]
 }
