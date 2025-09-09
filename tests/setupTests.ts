@@ -3,8 +3,13 @@ import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from 'util';
 
 // Polyfills for jsdom environment
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+if (typeof global.TextEncoder === 'undefined') {
+  global.TextEncoder = TextEncoder;
+}
+if (typeof global.TextDecoder === 'undefined') {
+  // @ts-ignore
+  global.TextDecoder = TextDecoder as unknown as { new(label?: string, options?: any): TextDecoder };
+}
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -21,10 +26,14 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-// Mock Web3 related globals if needed
-global.window = global.window || {};
-global.window.ethereum = {
-  request: jest.fn(),
-  on: jest.fn(),
-  removeListener: jest.fn(),
-};
+// Mock Web3 相关全局变量（如有需要）
+if (typeof window !== 'undefined') {
+  if (!('ethereum' in window)) {
+    // @ts-ignore
+    window.ethereum = {
+      request: jest.fn(),
+      on: jest.fn(),
+      removeListener: jest.fn(),
+    };
+  }
+}

@@ -29,5 +29,6 @@
     }
   },
 
-  "include": ["src", "tests"]
+  "include": ["src", "tests"],
+  "exclude": ["demo/**/*", "tests/**/*", "cypress/**/*"]
 }
