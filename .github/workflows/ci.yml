@@ -43,6 +43,7 @@ jobs:
     #   run: yarn tsc --noEmit # 使用 Yarn 调用 tsc
 
     - name: AI Code Review
+      timeout-minutes: 10  # 设置AI代码走读超时为5分钟
       run: |
         # 获取当前分支与main分支的差异文件
         echo "🤖 开始AI代码审查..."
