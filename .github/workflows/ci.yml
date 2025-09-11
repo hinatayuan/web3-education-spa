@@ -121,12 +121,23 @@ jobs:
                 }]
               }')
             
-            # 调用API（设置超时）
-            RESPONSE=$(timeout 30 curl -s -X POST \
+            # 调用API（设置超时和重试）
+            echo "🔗 调用API: $(echo "$REQUEST_BODY" | jq -r '.messages[0].content' | head -c 100)..."
+            
+            RESPONSE=$(timeout 60 curl -s -X POST \
               -H "Content-Type: application/json" \
+              -H "User-Agent: GitHub-Actions/1.0" \
               -d "$REQUEST_BODY" \
+              --connect-timeout 10 \
+              --max-time 60 \
               "https://ai-codereview-agent.liuweiyuan0713.workers.dev/api/agents/codeReviewAgent/generate" \
-              2>/dev/null || echo '{"text": "审查超时或API调用失败"}')
+              2>&1 || echo '{"text": "API调用失败，请检查网络连接或API服务状态"}')
+            
+            # 检查响应是否为有效JSON
+            if ! echo "$RESPONSE" | jq . >/dev/null 2>&1; then
+              echo "⚠️  API返回非JSON响应: $RESPONSE"
+              RESPONSE='{"text": "API返回格式错误"}'
+            fi
             
             # 解析和保存结果
             REVIEW_TEXT=$(echo "$RESPONSE" | jq -r '.text // "无法获取审查结果"')
@@ -222,12 +233,15 @@ jobs:
         name: dist
         path: dist/
 
-    - name: Configure registry for Wrangler
-      run: yarn config set registry https://registry.npmjs.org
+    - name: Install Wrangler globally
+      run: |
+        npm config set registry https://registry.npmjs.org
+        npm install -g wrangler@3.90.0
+        wrangler --version
 
     - name: Deploy to Cloudflare Pages
-      uses: cloudflare/wrangler-action@v3
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+      run: |
+        wrangler pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
