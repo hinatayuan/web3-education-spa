@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm run lint)",
-      "Bash(yarn test:e2e)"
+      "Bash(yarn test:e2e)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:unpkg.com)"
     ],
     "deny": [],
     "ask": []
