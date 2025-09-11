@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -13,209 +13,233 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-        registry-url: 'https://registry.npmjs.org'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
 
-    - name: Install Yarn
-      run: npm install -g yarn # 确保 Yarn 可用
+      - name: Install Yarn
+        run: npm install -g yarn # 确保 Yarn 可用
 
-    - name: Install dependencies
-      run: |
-        yarn config set network-timeout 300000
-        yarn install --network-timeout 300000
+      - name: Clear Yarn cache
+        run: yarn cache clean # 清理缓存避免冲突
 
-    - name: Run linting
-      run: yarn lint # 假设 package.json 中 script 名为 lint
+      - name: Install dependencies
+        run: |
+          # 设置使用官方 npm registry，避免镜像源问题
+          yarn config set registry https://registry.npmjs.org/
+          yarn config set network-timeout 300000
+          # 添加重试机制
+          for i in {1..3}; do
+            yarn install --network-timeout 300000 && break || {
+              echo "安装失败，第 $i 次重试..."
+              [ $i -eq 3 ] && exit 1
+              sleep 10
+            }
+          done
 
-    - name: TypeScript type check
-      run: yarn tsc --noEmit # 使用 Yarn 调用 tsc
+      - name: Run linting
+        run: yarn lint # 假设 package.json 中 script 名为 lint
 
-    - name: AI Code Review
-      run: |
-        echo "🤖 开始AI代码审查..."
-        
-        # 创建临时目录
-        mkdir -p /tmp/code-review
-        
-        # 智能获取变更文件列表
-        if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-          # PR场景：获取分支间的完整差异
-          BASE_SHA=${{ github.event.pull_request.base.sha }}
-          HEAD_SHA=${{ github.event.pull_request.head.sha }}
-          CHANGED_FILES=$(git diff --name-only --diff-filter=AMR $BASE_SHA...$HEAD_SHA)
-        else
-          # Push场景：只审查当前提交
-          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
-            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD~1..HEAD)
+      - name: TypeScript type check
+        run: yarn tsc --noEmit # 使用 Yarn 调用 tsc
+
+      - name: AI Code Review
+        run: |
+          echo "🤖 开始AI代码审查..."
+
+          # 创建临时目录
+          mkdir -p /tmp/code-review
+
+          # 智能获取变更文件列表
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            # PR场景：获取分支间的完整差异
+            BASE_SHA=${{ github.event.pull_request.base.sha }}
+            HEAD_SHA=${{ github.event.pull_request.head.sha }}
+            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR $BASE_SHA...$HEAD_SHA)
           else
-            # 初始提交：获取所有文件但限制范围
-            CHANGED_FILES=$(git ls-files)
-          fi
-        fi
-        
-        # 智能过滤：只包含核心业务代码
-        FILTERED_FILES=""
-        for file in $CHANGED_FILES; do
-          # 包含路径：src/, components/, hooks/, utils/, lib/
-          if echo "$file" | grep -E '^(src/|components/|hooks/|utils/|lib/).*\.(js|ts|jsx|tsx)$' > /dev/null; then
-            # 排除测试文件、配置文件
-            if ! echo "$file" | grep -E '(\.(test|spec)\.|\.config\.|\.d\.ts$|/__tests__/|/test/)' > /dev/null; then
-              # 检查文件大小（限制500行以内）
-              if [ -f "$file" ] && [ $(wc -l < "$file" 2>/dev/null || echo 0) -le 500 ]; then
-                FILTERED_FILES="$FILTERED_FILES $file"
-              fi
+            # Push场景：只审查当前提交
+            if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+              CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD~1..HEAD)
+            else
+              # 初始提交：获取所有文件但限制范围
+              CHANGED_FILES=$(git ls-files)
             fi
           fi
-        done
-        
-        if [ -z "$FILTERED_FILES" ]; then
-          echo "📝 没有发现需要审查的核心代码文件"
-          exit 0
-        fi
-        
-        # 限制审查文件数量（最多5个文件）
-        FILE_COUNT=$(echo $FILTERED_FILES | wc -w)
-        if [ $FILE_COUNT -gt 5 ]; then
-          FILTERED_FILES=$(echo $FILTERED_FILES | cut -d' ' -f1-5)
-          echo "⚠️  文件数量过多，仅审查前5个文件"
-        fi
-        
-        echo "📋 将审查以下 $(echo $FILTERED_FILES | wc -w) 个文件："
-        echo "$FILTERED_FILES"
-        
-        # 批量审查文件
-        REVIEW_COUNT=0
-        for file in $FILTERED_FILES; do
-          if [ -f "$file" ]; then
-            echo "🔍 正在审查: $file"
-            
-            # 获取完整文件内容和变更差异
-            FILE_CONTENT=$(cat "$file" 2>/dev/null || echo "无法读取文件内容")
-            
-            # 构造增强的审查请求
-            REQUEST_BODY=$(jq -n \
-              --arg file "$file" \
-              --arg content "$FILE_CONTENT" \
-              '{
-                "messages": [{
-                  "role": "user", 
-                  "content": ("请审查以下代码文件，重点关注代码质量、安全性、性能和最佳实践：\n\n文件路径: " + $file + "\n\n完整代码:\n" + $content + "\n\n请提供简洁的审查意见，包括:\n1. 主要问题（如有）\n2. 改进建议\n3. 代码亮点（如有）")
-                }]
-              }')
-            
-            # 调用API（设置超时）
-            RESPONSE=$(timeout 30 curl -s -X POST \
-              -H "Content-Type: application/json" \
-              -d "$REQUEST_BODY" \
-              "https://ai-codereview-agent.liuweiyuan0713.workers.dev/api/agents/codeReviewAgent/generate" \
-              2>/dev/null || echo '{"text": "审查超时或API调用失败"}')
-            
-            # 解析和保存结果
-            REVIEW_TEXT=$(echo "$RESPONSE" | jq -r '.text // "无法获取审查结果"')
-            
-            {
-              echo "## 📄 $file"
-              echo ""
-              echo "$REVIEW_TEXT"
-              echo ""
-              echo "---"
-              echo ""
-            } >> /tmp/code-review/review-${{ github.run_id }}.md
-            
-            REVIEW_COUNT=$((REVIEW_COUNT + 1))
-            echo "✅ 完成审查 ($REVIEW_COUNT/$(echo $FILTERED_FILES | wc -w)): $file"
+
+          # 智能过滤：只包含核心业务代码
+          FILTERED_FILES=""
+          for file in $CHANGED_FILES; do
+            # 包含路径：src/, components/, hooks/, utils/, lib/
+            if echo "$file" | grep -E '^(src/|components/|hooks/|utils/|lib/).*\.(js|ts|jsx|tsx)$' > /dev/null; then
+              # 排除测试文件、配置文件
+              if ! echo "$file" | grep -E '(\.(test|spec)\.|\.config\.|\.d\.ts$|/__tests__/|/test/)' > /dev/null; then
+                # 检查文件大小（限制500行以内）
+                if [ -f "$file" ] && [ $(wc -l < "$file" 2>/dev/null || echo 0) -le 500 ]; then
+                  FILTERED_FILES="$FILTERED_FILES $file"
+                fi
+              fi
+            fi
+          done
+
+          if [ -z "$FILTERED_FILES" ]; then
+            echo "📝 没有发现需要审查的核心代码文件"
+            exit 0
           fi
-        done
-        
-        echo "🎉 AI代码审查完成！审查了 $REVIEW_COUNT 个文件"
-        
-        # 输出审查摘要
-        if [ -f "/tmp/code-review/review-${{ github.run_id }}.md" ]; then
-          echo ""
-          echo "📊 === 代码审查报告摘要 ==="
-          head -100 /tmp/code-review/review-${{ github.run_id }}.md
-        fi
 
-    - name: Run unit tests
-      run: yarn test:unit # 假设 package.json 中 script 名为 test:unit
+          # 限制审查文件数量（最多5个文件）
+          FILE_COUNT=$(echo $FILTERED_FILES | wc -w)
+          if [ $FILE_COUNT -gt 5 ]; then
+            FILTERED_FILES=$(echo $FILTERED_FILES | cut -d' ' -f1-5)
+            echo "⚠️  文件数量过多，仅审查前5个文件"
+          fi
 
-    - name: Start development server
-      run: |
-        yarn client:server &
-        sleep 30 # 保持原逻辑，启动开发服务器并等待
+          echo "📋 将审查以下 $(echo $FILTERED_FILES | wc -w) 个文件："
+          echo "$FILTERED_FILES"
 
-    - name: Run e2e tests
-      run: yarn test:e2e # 假设 package.json 中 script 名为 test:e2e
+          # 批量审查文件
+          REVIEW_COUNT=0
+          for file in $FILTERED_FILES; do
+            if [ -f "$file" ]; then
+              echo "🔍 正在审查: $file"
+              
+              # 获取完整文件内容和变更差异
+              FILE_CONTENT=$(cat "$file" 2>/dev/null || echo "无法读取文件内容")
+              
+              # 构造增强的审查请求
+              REQUEST_BODY=$(jq -n \
+                --arg file "$file" \
+                --arg content "$FILE_CONTENT" \
+                '{
+                  "messages": [{
+                    "role": "user", 
+                    "content": ("请审查以下代码文件，重点关注代码质量、安全性、性能和最佳实践：\n\n文件路径: " + $file + "\n\n完整代码:\n" + $content + "\n\n请提供简洁的审查意见，包括:\n1. 主要问题（如有）\n2. 改进建议\n3. 代码亮点（如有）")
+                  }]
+                }')
+              
+              # 调用API（设置超时）
+              RESPONSE=$(timeout 30 curl -s -X POST \
+                -H "Content-Type: application/json" \
+                -d "$REQUEST_BODY" \
+                "https://ai-codereview-agent.liuweiyuan0713.workers.dev/api/agents/codeReviewAgent/generate" \
+                2>/dev/null || echo '{"text": "审查超时或API调用失败"}')
+              
+              # 解析和保存结果
+              REVIEW_TEXT=$(echo "$RESPONSE" | jq -r '.text // "无法获取审查结果"')
+              
+              {
+                echo "## 📄 $file"
+                echo ""
+                echo "$REVIEW_TEXT"
+                echo ""
+                echo "---"
+                echo ""
+              } >> /tmp/code-review/review-${{ github.run_id }}.md
+              
+              REVIEW_COUNT=$((REVIEW_COUNT + 1))
+              echo "✅ 完成审查 ($REVIEW_COUNT/$(echo $FILTERED_FILES | wc -w)): $file"
+            fi
+          done
 
+          echo "🎉 AI代码审查完成！审查了 $REVIEW_COUNT 个文件"
 
-    - name: Upload test coverage
-      uses: codecov/codecov-action@v4
-      with:
-        directory: ./docs/jest-coverage
-        fail_ci_if_error: true
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          # 输出审查摘要
+          if [ -f "/tmp/code-review/review-${{ github.run_id }}.md" ]; then
+            echo ""
+            echo "📊 === 代码审查报告摘要 ==="
+            head -100 /tmp/code-review/review-${{ github.run_id }}.md
+          fi
+
+      - name: Run unit tests
+        run: yarn test:unit # 假设 package.json 中 script 名为 test:unit
+
+      - name: Start development server
+        run: |
+          yarn client:server &
+          sleep 30 # 保持原逻辑，启动开发服务器并等待
+
+      - name: Run e2e tests
+        run: yarn test:e2e # 假设 package.json 中 script 名为 test:e2e
+
+      - name: Upload test coverage
+        uses: codecov/codecov-action@v4
+        with:
+          directory: ./docs/jest-coverage
+          fail_ci_if_error: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 30 # 设置任务超时为 30 分钟
     needs: test
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20.x
-        cache: 'yarn'
-        registry-url: 'https://registry.npmjs.org'
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
 
-    - name: Install Yarn
-      run: npm install -g yarn # 确保 Yarn 可用
+      - name: Install Yarn
+        run: npm install -g yarn # 确保 Yarn 可用
 
-    - name: Install dependencies
-      run: |
-        yarn config set network-timeout 300000
-        yarn install --frozen-lockfile --network-timeout 300000
+      - name: Clear Yarn cache
+        run: yarn cache clean # 清理缓存避免冲突
 
-    - name: Build production
-      run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
+      - name: Install dependencies
+        run: |
+          # 设置使用官方 npm registry，避免镜像源问题
+          yarn config set registry https://registry.npmjs.org/
+          yarn config set network-timeout 300000
+          # 添加重试机制
+          for i in {1..3}; do
+            yarn install --frozen-lockfile --network-timeout 300000 && break || {
+              echo "安装失败，第 $i 次重试..."
+              [ $i -eq 3 ] && exit 1
+              sleep 10
+            }
+          done
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: dist
-        path: dist/
+      - name: Build production
+        run: yarn client:prod # 假设 package.json 中 script 名为 client:prod
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: dist
-        path: dist/
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
-    - name: Deploy to Cloudflare Pages
-      uses: cloudflare/wrangler-action@v3
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          wranglerVersion: '3.90.0'
