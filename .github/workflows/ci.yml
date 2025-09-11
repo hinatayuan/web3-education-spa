@@ -53,12 +53,21 @@ jobs:
           HEAD_SHA=${{ github.event.pull_request.head.sha }}
           CHANGED_FILES=$(git diff --name-only --diff-filter=AMR $BASE_SHA...$HEAD_SHA)
         else
-          # Push场景：只审查当前提交
+          # Push场景：智能判断变更范围
           if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
-            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD~1..HEAD)
+            # 检查是否只修改了非业务文件
+            ALL_CHANGED=$(git diff --name-only HEAD~1..HEAD)
+            BUSINESS_CHANGED=$(echo "$ALL_CHANGED" | grep -E '^(src/|components/|hooks/|utils/|lib/).*\.(js|ts|jsx|tsx)$' || true)
+            
+            if [ -z "$BUSINESS_CHANGED" ]; then
+              echo "📝 本次提交未修改业务代码，跳过AI审查"
+              exit 0
+            fi
+            
+            CHANGED_FILES="$BUSINESS_CHANGED"
           else
-            # 初始提交：获取所有文件但限制范围
-            CHANGED_FILES=$(git ls-files)
+            # 初始提交：仅审查核心入口文件
+            CHANGED_FILES=$(git ls-files | grep -E '^src/(main|index|App)\.(js|ts|jsx|tsx)$' | head -3)
           fi
         fi
         
@@ -212,6 +221,9 @@ jobs:
       with:
         name: dist
         path: dist/
+
+    - name: Configure registry for Wrangler
+      run: yarn config set registry https://registry.npmjs.org
 
     - name: Deploy to Cloudflare Pages
       uses: cloudflare/wrangler-action@v3
