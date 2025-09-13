@@ -18,6 +18,33 @@ module.exports = {
     '^@layouts(.*)$': '<rootDir>/src/layouts$1',
     '\\.css$': 'identity-obj-proxy',
   },
+  // 覆盖率配置
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx,js,jsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.test.{ts,tsx,js,jsx}',
+    '!src/**/*.spec.{ts,tsx,js,jsx}',
+    '!src/**/__tests__/**',
+    '!src/**/index.ts', // 通常index文件只做导出
+    '!src/types/ethers-contracts/**', // 自动生成的合约类型文件
+  ],
+  coverageDirectory: './docs/jest-coverage',
+  coverageReporters: [
+    'text',
+    'text-summary',
+    'html',
+    'lcov',
+    'clover',
+    'json',
+    'json-summary'
+  ],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/tests/',
+    '/docs/',
+    '\\.d\\.ts$'
+  ],
   coverageThreshold: {
     global: {
       branches: 50,
@@ -27,8 +54,5 @@ module.exports = {
     },
   },
   watchAll: false,
-  collectCoverage: true,
-  coverageDirectory: './docs/jest-coverage',
-  coveragePathIgnorePatterns: ['/node_modules/', '/tests/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx', 'node'],
 };

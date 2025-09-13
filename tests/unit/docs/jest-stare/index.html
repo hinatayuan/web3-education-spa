@@ -89,7 +89,7 @@
                 <canvas id="test-suites-canvas" width="100" height="100"></canvas>
                 <h2>Test Suites</h2>
                 <div class="list-group">
-                    <p id="test-suites-results" class="list-group-item list-group-item-action">2 passed, 2 total</p>
+                    <p id="test-suites-results" class="list-group-item list-group-item-action">9 passed, 9 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -97,7 +97,7 @@
                 <canvas id="tests-canvas" width="100" height="100"></canvas>
                 <h2>Tests</h2>
                 <div class="list-group">
-                    <p id="tests-results" class="list-group-item list-group-item-action">22 passed, 22 total</p>
+                    <p id="tests-results" class="list-group-item list-group-item-action">147 passed, 147 total</p>
                 </div>
             </div>
             <!-- /.col-lg-4 -->
@@ -128,14 +128,14 @@
             <div class="d-none" id="test-results">{
   &quot;numFailedTestSuites&quot;: 0,
   &quot;numFailedTests&quot;: 0,
-  &quot;numPassedTestSuites&quot;: 2,
-  &quot;numPassedTests&quot;: 22,
+  &quot;numPassedTestSuites&quot;: 9,
+  &quot;numPassedTests&quot;: 147,
   &quot;numPendingTestSuites&quot;: 0,
   &quot;numPendingTests&quot;: 0,
   &quot;numRuntimeErrorTestSuites&quot;: 0,
   &quot;numTodoTests&quot;: 0,
-  &quot;numTotalTestSuites&quot;: 2,
-  &quot;numTotalTests&quot;: 22,
+  &quot;numTotalTestSuites&quot;: 9,
+  &quot;numTotalTests&quot;: 147,
   &quot;openHandles&quot;: [],
   &quot;snapshot&quot;: {
     &quot;added&quot;: 0,
@@ -153,9 +153,2698 @@
     &quot;unmatched&quot;: 0,
     &quot;updated&quot;: 0
   },
-  &quot;startTime&quot;: 1757380928705,
+  &quot;startTime&quot;: 1757747506778,
   &quot;success&quot;: false,
   &quot;testResults&quot;: [
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 19,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507404,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507070,
+        &quot;loadTestEnvironmentStart&quot;: 1757747506797,
+        &quot;runtime&quot;: 333,
+        &quot;setupAfterEnvEnd&quot;: 1757747507180,
+        &quot;setupAfterEnvStart&quot;: 1757747507130,
+        &quot;setupFilesEnd&quot;: 1757747507071,
+        &quot;setupFilesStart&quot;: 1757747507071,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507071
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;hooks-useUserData.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;初始状态测试&quot;
+          ],
+          &quot;duration&quot;: 8,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 初始状态测试 应该返回初始状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507256,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该返回初始状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;初始状态测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 初始状态测试 应该在没有地址时返回空状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507264,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在没有地址时返回空状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;地址连接测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 地址连接测试 应该在地址变化时触发自动登录验证&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507266,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在地址变化时触发自动登录验证&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;地址连接测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 地址连接测试 应该从localStorage加载已存在的用户数据&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507269,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该从localStorage加载已存在的用户数据&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;签名处理测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 签名处理测试 应该在签名成功后创建新用户数据&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507272,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在签名成功后创建新用户数据&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;签名处理测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 签名处理测试 应该处理localStorage解析错误&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507273,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理localStorage解析错误&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;用户名更新测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 用户名更新测试 应该成功更新用户名&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507274,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该成功更新用户名&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;用户名更新测试&quot;
+          ],
+          &quot;duration&quot;: 6,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 用户名更新测试 应该在未验证时拒绝更新用户名&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507277,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在未验证时拒绝更新用户名&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;用户名更新测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 用户名更新测试 应该处理签名失败&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507284,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理签名失败&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;课程购买测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 课程购买测试 应该成功添加购买的课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507286,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该成功添加购买的课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;课程购买测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 课程购买测试 应该避免重复添加相同的课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507288,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该避免重复添加相同的课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;课程购买测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 课程购买测试 应该在没有用户数据时忽略添加课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507289,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在没有用户数据时忽略添加课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;课程购买测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 课程购买测试 应该在没有地址时忽略添加课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507290,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在没有地址时忽略添加课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;verifyAndCreateUser方法测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 verifyAndCreateUser方法测试 应该调用签名验证&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507291,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该调用签名验证&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;verifyAndCreateUser方法测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 verifyAndCreateUser方法测试 应该在没有地址时直接返回&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507292,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在没有地址时直接返回&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;verifyAndCreateUser方法测试&quot;
+          ],
+          &quot;duration&quot;: 4,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 verifyAndCreateUser方法测试 应该处理签名错误&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507293,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理签名错误&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;自动登录验证错误处理&quot;
+          ],
+          &quot;duration&quot;: 103,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 自动登录验证错误处理 应该处理自动登录验证失败&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507298,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理自动登录验证失败&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;状态传递测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 状态传递测试 应该正确传递isPending状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507401,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确传递isPending状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useUserData Hook测试&quot;,
+            &quot;状态传递测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useUserData Hook测试 状态传递测试 应该正确传递错误状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507402,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确传递错误状态&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 14,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507467,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507424,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507417,
+        &quot;runtime&quot;: 43,
+        &quot;setupAfterEnvEnd&quot;: 1757747507456,
+        &quot;setupAfterEnvStart&quot;: 1757747507438,
+        &quot;setupFilesEnd&quot;: 1757747507424,
+        &quot;setupFilesStart&quot;: 1757747507424,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507424
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;config-contract-simple.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 应该导出CourseManager合约地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507461,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出CourseManager合约地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 应该导出YDToken合约地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507462,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出YDToken合约地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 应该导出StakingSystem合约地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507462,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出StakingSystem合约地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 合约地址应该是有效的以太坊地址格式&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507463,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;合约地址应该是有效的以太坊地址格式&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 合约地址应该不为空&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507464,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;合约地址应该不为空&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约地址配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约地址配置 合约地址应该是唯一的&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507464,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;合约地址应该是唯一的&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约ABI配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约ABI配置 应该导出CourseManagerABI&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507464,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出CourseManagerABI&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约ABI配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约ABI配置 应该导出YDTokenABI&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507465,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出YDTokenABI&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约ABI配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约ABI配置 应该导出StakingSystemABI&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507465,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出StakingSystemABI&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约ABI配置&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约ABI配置 ABI应该包含函数和事件&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507465,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;ABI应该包含函数和事件&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;合约ABI配置&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 合约ABI配置 ABI应该有正确的结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507465,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;ABI应该有正确的结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;配置完整性测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 配置完整性测试 应该导出所有必需的配置项&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 12,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507466,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该导出所有必需的配置项&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;配置完整性测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 配置完整性测试 地址应该是字符串类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507466,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;地址应该是字符串类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;合约配置基础测试&quot;,
+            &quot;网络配置测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;合约配置基础测试 网络配置测试 应该使用正确的合约地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 6,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507467,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该使用正确的合约地址&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 24,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507584,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507480,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507475,
+        &quot;runtime&quot;: 104,
+        &quot;setupAfterEnvEnd&quot;: 1757747507509,
+        &quot;setupAfterEnvStart&quot;: 1757747507493,
+        &quot;setupFilesEnd&quot;: 1757747507480,
+        &quot;setupFilesStart&quot;: 1757747507480,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507480
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;components-CourseCard.test.tsx&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;基本渲染测试&quot;
+          ],
+          &quot;duration&quot;: 13,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 基本渲染测试 应该正确渲染课程信息&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 6,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507533,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确渲染课程信息&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;基本渲染测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 基本渲染测试 应该显示暂停销售状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507546,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示暂停销售状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;基本渲染测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 基本渲染测试 应该调用formatEther来格式化价格&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507548,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该调用formatEther来格式化价格&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;未连接钱包状态测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 未连接钱包状态测试 应该显示连接钱包提示&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507549,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示连接钱包提示&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;课程创建者状态测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 课程创建者状态测试 应该显示创建者标识&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507550,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示创建者标识&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;课程创建者状态测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 课程创建者状态测试 应该处理大小写不敏感的地址比较&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507552,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理大小写不敏感的地址比较&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;已购买状态测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 已购买状态测试 应该显示已购买标识&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507553,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示已购买标识&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;课程暂停销售测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 课程暂停销售测试 应该显示暂停销售信息&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507555,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示暂停销售信息&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;授权流程测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 授权流程测试 应该显示Approve按钮当需要授权时&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507556,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示Approve按钮当需要授权时&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;授权流程测试&quot;
+          ],
+          &quot;duration&quot;: 4,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 授权流程测试 应该调用approve函数当点击Approve按钮&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507558,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该调用approve函数当点击Approve按钮&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;授权流程测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 授权流程测试 应该显示loading状态当授权进行中&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507562,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示loading状态当授权进行中&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;授权流程测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 授权流程测试 应该显示确认状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507564,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示确认状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;授权流程测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 授权流程测试 应该显示已确认状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507566,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示已确认状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;购买流程测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 购买流程测试 应该显示购买按钮当已授权且未购买&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507567,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示购买按钮当已授权且未购买&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;购买流程测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 购买流程测试 应该调用purchaseCourse函数当点击购买按钮&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507570,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该调用purchaseCourse函数当点击购买按钮&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;购买流程测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 购买流程测试 应该显示购买loading状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507572,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示购买loading状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;购买流程测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 购买流程测试 应该显示购买确认状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507573,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示购买确认状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;购买流程测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 购买流程测试 应该显示购买成功状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507575,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该显示购买成功状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;按钮禁用状态测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 按钮禁用状态测试 Approve按钮应该在pending时被禁用&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507576,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;Approve按钮应该在pending时被禁用&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;按钮禁用状态测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 按钮禁用状态测试 购买按钮应该在pending时被禁用&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507577,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;购买按钮应该在pending时被禁用&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 边界情况测试 应该处理创建者购买自己的课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507578,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理创建者购买自己的课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 边界情况测试 应该处理已购买用户&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507580,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理已购买用户&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 边界情况测试 应该处理价格为0的课程&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507581,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理价格为0的课程&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;CourseCard组件测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;CourseCard组件测试 边界情况测试 应该处理非常长的课程标题和描述&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507582,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理非常长的课程标题和描述&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 25,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507662,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507596,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507591,
+        &quot;runtime&quot;: 66,
+        &quot;setupAfterEnvEnd&quot;: 1757747507624,
+        &quot;setupAfterEnvStart&quot;: 1757747507608,
+        &quot;setupFilesEnd&quot;: 1757747507596,
+        &quot;setupFilesStart&quot;: 1757747507596,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507596
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;hooks-useImmer.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;基本功能测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 基本功能测试 应该使用初始值初始化状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507644,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该使用初始值初始化状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;基本功能测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 基本功能测试 应该支持函数形式的初始值&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507645,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持函数形式的初始值&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;基本功能测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 基本功能测试 应该支持原始类型的初始值&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507648,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持原始类型的初始值&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;基本功能测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 基本功能测试 应该支持数组初始值&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507648,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持数组初始值&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;Draft函数更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新对象状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507649,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该通过draft函数更新对象状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;Draft函数更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新嵌套对象&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507650,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该通过draft函数更新嵌套对象&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;Draft函数更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新数组&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507651,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该通过draft函数更新数组&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;Draft函数更新测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 Draft函数更新测试 应该通过draft函数操作复杂数据结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507652,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该通过draft函数操作复杂数据结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;Draft函数更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 Draft函数更新测试 应该支持从数组中删除元素&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507652,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持从数组中删除元素&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;直接值更新测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 直接值更新测试 应该支持直接值更新对象&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507653,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持直接值更新对象&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;直接值更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 直接值更新测试 应该支持直接值更新原始类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507653,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持直接值更新原始类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;直接值更新测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 直接值更新测试 应该支持直接值更新数组&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507654,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持直接值更新数组&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;直接值更新测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 直接值更新测试 应该支持直接值更新为null&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507654,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持直接值更新为null&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;直接值更新测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 直接值更新测试 应该支持直接值更新为undefined&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507655,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持直接值更新为undefined&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;不可变性测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 不可变性测试 更新后应该返回新的引用&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507655,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;更新后应该返回新的引用&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;不可变性测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 不可变性测试 嵌套对象更新后应该保持引用不变的部分&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507656,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;嵌套对象更新后应该保持引用不变的部分&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;不可变性测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 不可变性测试 状态应该是冻结的&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507656,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;状态应该是冻结的&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 边界情况测试 应该处理空对象&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507656,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理空对象&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 边界情况测试 应该处理空数组&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507657,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理空数组&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 边界情况测试 应该处理复杂的嵌套更新&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507658,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理复杂的嵌套更新&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;边界情况测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 边界情况测试 应该处理没有变化的draft函数&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507658,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理没有变化的draft函数&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;性能测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 性能测试 updater函数应该被memoized&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507659,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;updater函数应该被memoized&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;性能测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 性能测试 多次更新应该正确工作&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507660,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;多次更新应该正确工作&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;TypeScript类型测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 TypeScript类型测试 应该正确推断对象类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507660,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确推断对象类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;useImmer Hook测试&quot;,
+            &quot;TypeScript类型测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;useImmer Hook测试 TypeScript类型测试 应该正确推断数组类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507661,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确推断数组类型&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 3,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507731,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507675,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507671,
+        &quot;runtime&quot;: 55,
+        &quot;setupAfterEnvEnd&quot;: 1757747507704,
+        &quot;setupAfterEnvStart&quot;: 1757747507686,
+        &quot;setupFilesEnd&quot;: 1757747507676,
+        &quot;setupFilesStart&quot;: 1757747507676,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507676
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;Loading.test.tsx&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Loading组件测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Loading组件测试 应该正确渲染Loading组件&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507724,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确渲染Loading组件&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Loading组件测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Loading组件测试 应该正确渲染Loading组件的DOM结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507727,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确渲染Loading组件的DOM结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;Loading组件测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;Loading组件测试 应该能够多次渲染而不出错&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507729,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够多次渲染而不出错&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 18,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507776,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507742,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507738,
+        &quot;runtime&quot;: 34,
+        &quot;setupAfterEnvEnd&quot;: 1757747507770,
+        &quot;setupAfterEnvStart&quot;: 1757747507755,
+        &quot;setupFilesEnd&quot;: 1757747507742,
+        &quot;setupFilesStart&quot;: 1757747507742,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507742
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;utils.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该正确格式化标准以太坊地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507773,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确格式化标准以太坊地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该正确处理自定义长度&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507773,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理自定义长度&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理没有0x前缀的地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507773,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理没有0x前缀的地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理空字符串&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507773,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理空字符串&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理null或undefined&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理null或undefined&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理过短的地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理过短的地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理刚好符合长度要求的地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理刚好符合长度要求的地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理极限长度地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理极限长度地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该保留原始地址的0x前缀状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该保留原始地址的0x前缀状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理包含大写字母的地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理包含大写字母的地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理混合大小写的地址&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理混合大小写的地址&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该在不同参数下正确工作&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507774,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该在不同参数下正确工作&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理边界情况：长度参数为0&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507775,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理边界情况：长度参数为0&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;formatWalletAddress&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 formatWalletAddress 应该处理边界情况：长度参数很大&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507775,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该处理边界情况：长度参数很大&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;地址验证相关函数&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 地址验证相关函数 应该正确验证以太坊地址格式&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 7,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507775,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确验证以太坊地址格式&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;地址比较函数&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 地址比较函数 应该正确比较地址相等性（忽略大小写）&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507775,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确比较地址相等性（忽略大小写）&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;地址处理实用函数&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 地址处理实用函数 应该正确提取地址的校验和&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507776,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确提取地址的校验和&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;utils工具函数测试&quot;,
+            &quot;地址处理实用函数&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;utils工具函数测试 地址处理实用函数 应该正确标准化地址格式&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507776,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确标准化地址格式&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 22,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507827,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507790,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507785,
+        &quot;runtime&quot;: 37,
+        &quot;setupAfterEnvEnd&quot;: 1757747507817,
+        &quot;setupAfterEnvStart&quot;: 1757747507800,
+        &quot;setupFilesEnd&quot;: 1757747507790,
+        &quot;setupFilesStart&quot;: 1757747507790,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507790
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;types.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;Course接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 Course接口测试 应该定义正确的Course接口结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 7,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507820,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该定义正确的Course接口结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;Course接口测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 Course接口测试 应该正确处理Course的不同属性类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 7,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507820,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理Course的不同属性类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;Course接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 Course接口测试 应该支持Course的所有必需属性&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 7,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507821,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持Course的所有必需属性&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;UserData接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 UserData接口测试 应该定义正确的UserData接口结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507821,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该定义正确的UserData接口结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;UserData接口测试&quot;
+          ],
+          &quot;duration&quot;: 2,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 UserData接口测试 应该支持空的购买课程列表&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507821,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持空的购买课程列表&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;UserData接口测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 UserData接口测试 应该正确处理UserData的属性类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507823,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理UserData的属性类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;UserData接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 UserData接口测试 应该支持UserData的所有必需属性&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507824,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持UserData的所有必需属性&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;TokenExchangeProps接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 TokenExchangeProps接口测试 应该定义正确的TokenExchangeProps接口结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507824,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该定义正确的TokenExchangeProps接口结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;TokenExchangeProps接口测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 TokenExchangeProps接口测试 应该支持零值和小数值&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507824,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持零值和小数值&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;TokenExchangeProps接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 TokenExchangeProps接口测试 应该支持TokenExchangeProps的所有必需属性&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持TokenExchangeProps的所有必需属性&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumProvider接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumProvider接口测试 应该定义正确的EthereumProvider接口结构&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该定义正确的EthereumProvider接口结构&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumProvider接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumProvider接口测试 应该正确处理request方法&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理request方法&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumProvider接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumProvider接口测试 应该支持可选的removeListener方法&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持可选的removeListener方法&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumError接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumError接口测试 应该扩展Error并包含可选的code属性&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该扩展Error并包含可选的code属性&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumError接口测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumError接口测试 应该支持没有code的错误&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507825,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持没有code的错误&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;EthereumError接口测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 EthereumError接口测试 应该支持常见的以太坊错误代码&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 5,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507826,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该支持常见的以太坊错误代码&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型兼容性和约束测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型兼容性和约束测试 应该正确处理Course和UserData之间的关系&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507826,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理Course和UserData之间的关系&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型兼容性和约束测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型兼容性和约束测试 应该正确处理BigInt类型的计算&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507826,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理BigInt类型的计算&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型兼容性和约束测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型兼容性和约束测试 应该正确处理地址格式验证&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507826,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理地址格式验证&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型兼容性和约束测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型兼容性和约束测试 应该正确处理TokenExchangeProps的数值转换&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 4,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507826,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确处理TokenExchangeProps的数值转换&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型守卫函数测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型守卫函数测试 应该正确识别Course类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507827,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确识别Course类型&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;类型定义和接口测试&quot;,
+            &quot;类型守卫函数测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;类型定义和接口测试 类型守卫函数测试 应该正确识别UserData类型&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507827,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该正确识别UserData类型&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
+    {
+      &quot;leaks&quot;: false,
+      &quot;numFailingTests&quot;: 0,
+      &quot;numPassingTests&quot;: 10,
+      &quot;numPendingTests&quot;: 0,
+      &quot;numTodoTests&quot;: 0,
+      &quot;openHandles&quot;: [],
+      &quot;perfStats&quot;: {
+        &quot;end&quot;: 1757747507874,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507839,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507834,
+        &quot;runtime&quot;: 35,
+        &quot;setupAfterEnvEnd&quot;: 1757747507867,
+        &quot;setupAfterEnvStart&quot;: 1757747507851,
+        &quot;setupFilesEnd&quot;: 1757747507839,
+        &quot;setupFilesStart&quot;: 1757747507839,
+        &quot;slow&quot;: false,
+        &quot;start&quot;: 1757747507839
+      },
+      &quot;skipped&quot;: false,
+      &quot;snapshot&quot;: {
+        &quot;added&quot;: 0,
+        &quot;fileDeleted&quot;: false,
+        &quot;matched&quot;: 0,
+        &quot;unchecked&quot;: 0,
+        &quot;uncheckedKeys&quot;: [],
+        &quot;unmatched&quot;: 0,
+        &quot;updated&quot;: 0
+      },
+      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;basic.test.ts&quot;,
+      &quot;testResults&quot;: [
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够运行基本测试&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507868,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够运行基本测试&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理数字计算&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507868,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理数字计算&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理字符串操作&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507868,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理字符串操作&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理BigInt&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507869,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理BigInt&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理对象&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 3,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507869,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理对象&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理数组&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507869,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理数组&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理异步操作&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507869,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理异步操作&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 1,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够Mock函数&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 2,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507869,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够Mock函数&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 3,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理错误&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507870,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理错误&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;基础测试&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;基础测试 应该能够处理条件逻辑&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 1,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507873,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该能够处理条件逻辑&quot;
+        }
+      ],
+      &quot;failureMessage&quot;: null
+    },
     {
       &quot;leaks&quot;: false,
       &quot;numFailingTests&quot;: 0,
@@ -164,16 +2853,16 @@
       &quot;numTodoTests&quot;: 0,
       &quot;openHandles&quot;: [],
       &quot;perfStats&quot;: {
-        &quot;end&quot;: 1757380929461,
-        &quot;loadTestEnvironmentEnd&quot;: 1757380929175,
-        &quot;loadTestEnvironmentStart&quot;: 1757380928788,
-        &quot;runtime&quot;: 285,
-        &quot;setupAfterEnvEnd&quot;: 1757380929443,
-        &quot;setupAfterEnvStart&quot;: 1757380929314,
-        &quot;setupFilesEnd&quot;: 1757380929176,
-        &quot;setupFilesStart&quot;: 1757380929176,
+        &quot;end&quot;: 1757747507931,
+        &quot;loadTestEnvironmentEnd&quot;: 1757747507893,
+        &quot;loadTestEnvironmentStart&quot;: 1757747507882,
+        &quot;runtime&quot;: 37,
+        &quot;setupAfterEnvEnd&quot;: 1757747507925,
+        &quot;setupAfterEnvStart&quot;: 1757747507907,
+        &quot;setupFilesEnd&quot;: 1757747507894,
+        &quot;setupFilesStart&quot;: 1757747507894,
         &quot;slow&quot;: false,
-        &quot;start&quot;: 1757380929176
+        &quot;start&quot;: 1757747507894
       },
       &quot;skipped&quot;: false,
       &quot;snapshot&quot;: {
@@ -192,7 +2881,7 @@
             &quot;核心功能测试&quot;,
             &quot;地址工具函数&quot;
           ],
-          &quot;duration&quot;: 2,
+          &quot;duration&quot;: 1,
           &quot;failing&quot;: false,
           &quot;failureDetails&quot;: [],
           &quot;failureMessages&quot;: [],
@@ -201,7 +2890,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929453,
+          &quot;startAt&quot;: 1757747507926,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该正确格式化以太坊地址&quot;
         },
@@ -219,7 +2908,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 4,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929456,
+          &quot;startAt&quot;: 1757747507927,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该验证地址格式&quot;
         },
@@ -237,7 +2926,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929456,
+          &quot;startAt&quot;: 1757747507927,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该正确计算代币兑换数量&quot;
         },
@@ -246,7 +2935,7 @@
             &quot;核心功能测试&quot;,
             &quot;代币计算功能&quot;
           ],
-          &quot;duration&quot;: 1,
+          &quot;duration&quot;: 0,
           &quot;failing&quot;: false,
           &quot;failureDetails&quot;: [],
           &quot;failureMessages&quot;: [],
@@ -255,7 +2944,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929456,
+          &quot;startAt&quot;: 1757747507928,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该正确计算ETH数量&quot;
         },
@@ -273,27 +2962,9 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
+          &quot;startAt&quot;: 1757747507928,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该处理BigInt计算&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;核心功能测试&quot;,
-            &quot;Web3状态管理&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;核心功能测试 Web3状态管理 应该管理钱包连接状态&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 6,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该管理钱包连接状态&quot;
         },
         {
           &quot;ancestorTitles&quot;: [
@@ -304,12 +2975,30 @@
           &quot;failing&quot;: false,
           &quot;failureDetails&quot;: [],
           &quot;failureMessages&quot;: [],
+          &quot;fullName&quot;: &quot;核心功能测试 Web3状态管理 应该管理钱包连接状态&quot;,
+          &quot;invocations&quot;: 1,
+          &quot;location&quot;: null,
+          &quot;numPassingAsserts&quot;: 6,
+          &quot;retryReasons&quot;: [],
+          &quot;startAt&quot;: 1757747507928,
+          &quot;status&quot;: &quot;passed&quot;,
+          &quot;title&quot;: &quot;应该管理钱包连接状态&quot;
+        },
+        {
+          &quot;ancestorTitles&quot;: [
+            &quot;核心功能测试&quot;,
+            &quot;Web3状态管理&quot;
+          ],
+          &quot;duration&quot;: 0,
+          &quot;failing&quot;: false,
+          &quot;failureDetails&quot;: [],
+          &quot;failureMessages&quot;: [],
           &quot;fullName&quot;: &quot;核心功能测试 Web3状态管理 应该管理交易状态&quot;,
           &quot;invocations&quot;: 1,
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 6,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
+          &quot;startAt&quot;: 1757747507929,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该管理交易状态&quot;
         },
@@ -327,7 +3016,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 4,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929458,
+          &quot;startAt&quot;: 1757747507929,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该创建课程对象&quot;
         },
@@ -336,7 +3025,7 @@
             &quot;核心功能测试&quot;,
             &quot;课程数据处理&quot;
           ],
-          &quot;duration&quot;: 0,
+          &quot;duration&quot;: 1,
           &quot;failing&quot;: false,
           &quot;failureDetails&quot;: [],
           &quot;failureMessages&quot;: [],
@@ -345,7 +3034,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929459,
+          &quot;startAt&quot;: 1757747507929,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该过滤活跃课程&quot;
         },
@@ -363,7 +3052,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 3,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929459,
+          &quot;startAt&quot;: 1757747507930,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该处理网络错误&quot;
         },
@@ -381,7 +3070,7 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 4,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929459,
+          &quot;startAt&quot;: 1757747507930,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该处理合约调用错误&quot;
         },
@@ -399,213 +3088,9 @@
           &quot;location&quot;: null,
           &quot;numPassingAsserts&quot;: 4,
           &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929460,
+          &quot;startAt&quot;: 1757747507930,
           &quot;status&quot;: &quot;passed&quot;,
           &quot;title&quot;: &quot;应该验证表单输入&quot;
-        }
-      ],
-      &quot;failureMessage&quot;: null
-    },
-    {
-      &quot;leaks&quot;: false,
-      &quot;numFailingTests&quot;: 0,
-      &quot;numPassingTests&quot;: 10,
-      &quot;numPendingTests&quot;: 0,
-      &quot;numTodoTests&quot;: 0,
-      &quot;openHandles&quot;: [],
-      &quot;perfStats&quot;: {
-        &quot;end&quot;: 1757380929462,
-        &quot;loadTestEnvironmentEnd&quot;: 1757380929175,
-        &quot;loadTestEnvironmentStart&quot;: 1757380928788,
-        &quot;runtime&quot;: 287,
-        &quot;setupAfterEnvEnd&quot;: 1757380929444,
-        &quot;setupAfterEnvStart&quot;: 1757380929314,
-        &quot;setupFilesEnd&quot;: 1757380929175,
-        &quot;setupFilesStart&quot;: 1757380929175,
-        &quot;slow&quot;: false,
-        &quot;start&quot;: 1757380929175
-      },
-      &quot;skipped&quot;: false,
-      &quot;snapshot&quot;: {
-        &quot;added&quot;: 0,
-        &quot;fileDeleted&quot;: false,
-        &quot;matched&quot;: 0,
-        &quot;unchecked&quot;: 0,
-        &quot;uncheckedKeys&quot;: [],
-        &quot;unmatched&quot;: 0,
-        &quot;updated&quot;: 0
-      },
-      &quot;testFilePath&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;tests&#x2F;unit&#x2F;basic.test.ts&quot;,
-      &quot;testResults&quot;: [
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 3,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够运行基本测试&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929451,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够运行基本测试&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 2,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理数字计算&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929454,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理数字计算&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理字符串操作&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929456,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理字符串操作&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 1,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理BigInt&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929456,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理BigInt&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理对象&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 3,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理对象&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理数组&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 2,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理数组&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理异步操作&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929457,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理异步操作&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 0,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够Mock函数&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 2,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929458,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够Mock函数&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 3,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理错误&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929458,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理错误&quot;
-        },
-        {
-          &quot;ancestorTitles&quot;: [
-            &quot;基础测试&quot;
-          ],
-          &quot;duration&quot;: 1,
-          &quot;failing&quot;: false,
-          &quot;failureDetails&quot;: [],
-          &quot;failureMessages&quot;: [],
-          &quot;fullName&quot;: &quot;基础测试 应该能够处理条件逻辑&quot;,
-          &quot;invocations&quot;: 1,
-          &quot;location&quot;: null,
-          &quot;numPassingAsserts&quot;: 1,
-          &quot;retryReasons&quot;: [],
-          &quot;startAt&quot;: 1757380929461,
-          &quot;status&quot;: &quot;passed&quot;,
-          &quot;title&quot;: &quot;应该能够处理条件逻辑&quot;
         }
       ],
       &quot;failureMessage&quot;: null
@@ -620,16 +3105,24 @@
   &quot;ci&quot;: false,
   &quot;collectCoverage&quot;: true,
   &quot;collectCoverageFrom&quot;: [
-    &quot;basic.test.ts&quot;,
-    &quot;core-functions.test.ts&quot;
+    &quot;src&#x2F;**&#x2F;*.{ts,tsx,js,jsx}&quot;,
+    &quot;!src&#x2F;**&#x2F;*.d.ts&quot;,
+    &quot;!src&#x2F;**&#x2F;*.test.{ts,tsx,js,jsx}&quot;,
+    &quot;!src&#x2F;**&#x2F;*.spec.{ts,tsx,js,jsx}&quot;,
+    &quot;!src&#x2F;**&#x2F;__tests__&#x2F;**&quot;,
+    &quot;!src&#x2F;**&#x2F;index.ts&quot;,
+    &quot;!src&#x2F;types&#x2F;ethers-contracts&#x2F;**&quot;
   ],
   &quot;coverageDirectory&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&#x2F;docs&#x2F;jest-coverage&quot;,
   &quot;coverageProvider&quot;: &quot;babel&quot;,
   &quot;coverageReporters&quot;: [
-    &quot;json&quot;,
     &quot;text&quot;,
+    &quot;text-summary&quot;,
+    &quot;html&quot;,
     &quot;lcov&quot;,
-    &quot;clover&quot;
+    &quot;clover&quot;,
+    &quot;json&quot;,
+    &quot;json-summary&quot;
   ],
   &quot;coverageThreshold&quot;: {
     &quot;global&quot;: {
@@ -654,7 +3147,14 @@
   &quot;noStackTrace&quot;: false,
   &quot;nonFlagArgs&quot;: [
     &quot;basic.test.ts&quot;,
-    &quot;core-functions.test.ts&quot;
+    &quot;components-CourseCard.test.tsx&quot;,
+    &quot;config-contract-simple.test.ts&quot;,
+    &quot;core-functions.test.ts&quot;,
+    &quot;hooks-useImmer.test.ts&quot;,
+    &quot;hooks-useUserData.test.ts&quot;,
+    &quot;Loading.test.tsx&quot;,
+    &quot;types.test.ts&quot;,
+    &quot;utils.test.ts&quot;
   ],
   &quot;notify&quot;: false,
   &quot;notifyMode&quot;: &quot;failure-change&quot;,
@@ -676,7 +3176,7 @@
   &quot;rootDir&quot;: &quot;&#x2F;Users&#x2F;liuweiyuan&#x2F;Documents&#x2F;front-end&#x2F;yideng33期&#x2F;web3-education-spa&quot;,
   &quot;runInBand&quot;: false,
   &quot;runTestsByPath&quot;: false,
-  &quot;seed&quot;: -975831843,
+  &quot;seed&quot;: -210094988,
   &quot;skipFilter&quot;: false,
   &quot;snapshotFormat&quot;: {
     &quot;escapeString&quot;: false,
@@ -686,7 +3186,14 @@
   &quot;testPathPatterns&quot;: {
     &quot;patterns&quot;: [
       &quot;basic.test.ts&quot;,
-      &quot;core-functions.test.ts&quot;
+      &quot;components-CourseCard.test.tsx&quot;,
+      &quot;config-contract-simple.test.ts&quot;,
+      &quot;core-functions.test.ts&quot;,
+      &quot;hooks-useImmer.test.ts&quot;,
+      &quot;hooks-useUserData.test.ts&quot;,
+      &quot;Loading.test.tsx&quot;,
+      &quot;types.test.ts&quot;,
+      &quot;utils.test.ts&quot;
     ],
     &quot;type&quot;: &quot;TestPathPatterns&quot;
   },

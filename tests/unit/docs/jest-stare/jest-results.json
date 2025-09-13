@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 2,
-  "numPassedTests": 22,
+  "numPassedTestSuites": 9,
+  "numPassedTests": 147,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
-  "numTotalTestSuites": 2,
-  "numTotalTests": 22,
+  "numTotalTestSuites": 9,
+  "numTotalTests": 147,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,9 +26,2698 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1757380928705,
+  "startTime": 1757747506778,
   "success": false,
   "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 19,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507404,
+        "loadTestEnvironmentEnd": 1757747507070,
+        "loadTestEnvironmentStart": 1757747506797,
+        "runtime": 333,
+        "setupAfterEnvEnd": 1757747507180,
+        "setupAfterEnvStart": 1757747507130,
+        "setupFilesEnd": 1757747507071,
+        "setupFilesStart": 1757747507071,
+        "slow": false,
+        "start": 1757747507071
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/hooks-useUserData.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "初始状态测试"
+          ],
+          "duration": 8,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 初始状态测试 应该返回初始状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507256,
+          "status": "passed",
+          "title": "应该返回初始状态"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "初始状态测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 初始状态测试 应该在没有地址时返回空状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507264,
+          "status": "passed",
+          "title": "应该在没有地址时返回空状态"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "地址连接测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 地址连接测试 应该在地址变化时触发自动登录验证",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507266,
+          "status": "passed",
+          "title": "应该在地址变化时触发自动登录验证"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "地址连接测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 地址连接测试 应该从localStorage加载已存在的用户数据",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507269,
+          "status": "passed",
+          "title": "应该从localStorage加载已存在的用户数据"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "签名处理测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 签名处理测试 应该在签名成功后创建新用户数据",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507272,
+          "status": "passed",
+          "title": "应该在签名成功后创建新用户数据"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "签名处理测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 签名处理测试 应该处理localStorage解析错误",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507273,
+          "status": "passed",
+          "title": "应该处理localStorage解析错误"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "用户名更新测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 用户名更新测试 应该成功更新用户名",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507274,
+          "status": "passed",
+          "title": "应该成功更新用户名"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "用户名更新测试"
+          ],
+          "duration": 6,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 用户名更新测试 应该在未验证时拒绝更新用户名",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507277,
+          "status": "passed",
+          "title": "应该在未验证时拒绝更新用户名"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "用户名更新测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 用户名更新测试 应该处理签名失败",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507284,
+          "status": "passed",
+          "title": "应该处理签名失败"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "课程购买测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 课程购买测试 应该成功添加购买的课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507286,
+          "status": "passed",
+          "title": "应该成功添加购买的课程"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "课程购买测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 课程购买测试 应该避免重复添加相同的课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507288,
+          "status": "passed",
+          "title": "应该避免重复添加相同的课程"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "课程购买测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 课程购买测试 应该在没有用户数据时忽略添加课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507289,
+          "status": "passed",
+          "title": "应该在没有用户数据时忽略添加课程"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "课程购买测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 课程购买测试 应该在没有地址时忽略添加课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507290,
+          "status": "passed",
+          "title": "应该在没有地址时忽略添加课程"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "verifyAndCreateUser方法测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 verifyAndCreateUser方法测试 应该调用签名验证",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507291,
+          "status": "passed",
+          "title": "应该调用签名验证"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "verifyAndCreateUser方法测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 verifyAndCreateUser方法测试 应该在没有地址时直接返回",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507292,
+          "status": "passed",
+          "title": "应该在没有地址时直接返回"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "verifyAndCreateUser方法测试"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 verifyAndCreateUser方法测试 应该处理签名错误",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507293,
+          "status": "passed",
+          "title": "应该处理签名错误"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "自动登录验证错误处理"
+          ],
+          "duration": 103,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 自动登录验证错误处理 应该处理自动登录验证失败",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507298,
+          "status": "passed",
+          "title": "应该处理自动登录验证失败"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "状态传递测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 状态传递测试 应该正确传递isPending状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507401,
+          "status": "passed",
+          "title": "应该正确传递isPending状态"
+        },
+        {
+          "ancestorTitles": [
+            "useUserData Hook测试",
+            "状态传递测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useUserData Hook测试 状态传递测试 应该正确传递错误状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507402,
+          "status": "passed",
+          "title": "应该正确传递错误状态"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 14,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507467,
+        "loadTestEnvironmentEnd": 1757747507424,
+        "loadTestEnvironmentStart": 1757747507417,
+        "runtime": 43,
+        "setupAfterEnvEnd": 1757747507456,
+        "setupAfterEnvStart": 1757747507438,
+        "setupFilesEnd": 1757747507424,
+        "setupFilesStart": 1757747507424,
+        "slow": false,
+        "start": 1757747507424
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/config-contract-simple.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 应该导出CourseManager合约地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507461,
+          "status": "passed",
+          "title": "应该导出CourseManager合约地址"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 应该导出YDToken合约地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507462,
+          "status": "passed",
+          "title": "应该导出YDToken合约地址"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 应该导出StakingSystem合约地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507462,
+          "status": "passed",
+          "title": "应该导出StakingSystem合约地址"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 合约地址应该是有效的以太坊地址格式",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507463,
+          "status": "passed",
+          "title": "合约地址应该是有效的以太坊地址格式"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 合约地址应该不为空",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507464,
+          "status": "passed",
+          "title": "合约地址应该不为空"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约地址配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约地址配置 合约地址应该是唯一的",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507464,
+          "status": "passed",
+          "title": "合约地址应该是唯一的"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约ABI配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约ABI配置 应该导出CourseManagerABI",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507464,
+          "status": "passed",
+          "title": "应该导出CourseManagerABI"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约ABI配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约ABI配置 应该导出YDTokenABI",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507465,
+          "status": "passed",
+          "title": "应该导出YDTokenABI"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约ABI配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约ABI配置 应该导出StakingSystemABI",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507465,
+          "status": "passed",
+          "title": "应该导出StakingSystemABI"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约ABI配置"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约ABI配置 ABI应该包含函数和事件",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507465,
+          "status": "passed",
+          "title": "ABI应该包含函数和事件"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "合约ABI配置"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 合约ABI配置 ABI应该有正确的结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507465,
+          "status": "passed",
+          "title": "ABI应该有正确的结构"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "配置完整性测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 配置完整性测试 应该导出所有必需的配置项",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 12,
+          "retryReasons": [],
+          "startAt": 1757747507466,
+          "status": "passed",
+          "title": "应该导出所有必需的配置项"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "配置完整性测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 配置完整性测试 地址应该是字符串类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507466,
+          "status": "passed",
+          "title": "地址应该是字符串类型"
+        },
+        {
+          "ancestorTitles": [
+            "合约配置基础测试",
+            "网络配置测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "合约配置基础测试 网络配置测试 应该使用正确的合约地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1757747507467,
+          "status": "passed",
+          "title": "应该使用正确的合约地址"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 24,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507584,
+        "loadTestEnvironmentEnd": 1757747507480,
+        "loadTestEnvironmentStart": 1757747507475,
+        "runtime": 104,
+        "setupAfterEnvEnd": 1757747507509,
+        "setupAfterEnvStart": 1757747507493,
+        "setupFilesEnd": 1757747507480,
+        "setupFilesStart": 1757747507480,
+        "slow": false,
+        "start": 1757747507480
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/components-CourseCard.test.tsx",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "基本渲染测试"
+          ],
+          "duration": 13,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 基本渲染测试 应该正确渲染课程信息",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1757747507533,
+          "status": "passed",
+          "title": "应该正确渲染课程信息"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "基本渲染测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 基本渲染测试 应该显示暂停销售状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507546,
+          "status": "passed",
+          "title": "应该显示暂停销售状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "基本渲染测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 基本渲染测试 应该调用formatEther来格式化价格",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507548,
+          "status": "passed",
+          "title": "应该调用formatEther来格式化价格"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "未连接钱包状态测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 未连接钱包状态测试 应该显示连接钱包提示",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507549,
+          "status": "passed",
+          "title": "应该显示连接钱包提示"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "课程创建者状态测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 课程创建者状态测试 应该显示创建者标识",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507550,
+          "status": "passed",
+          "title": "应该显示创建者标识"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "课程创建者状态测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 课程创建者状态测试 应该处理大小写不敏感的地址比较",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507552,
+          "status": "passed",
+          "title": "应该处理大小写不敏感的地址比较"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "已购买状态测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 已购买状态测试 应该显示已购买标识",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507553,
+          "status": "passed",
+          "title": "应该显示已购买标识"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "课程暂停销售测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 课程暂停销售测试 应该显示暂停销售信息",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507555,
+          "status": "passed",
+          "title": "应该显示暂停销售信息"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "授权流程测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 授权流程测试 应该显示Approve按钮当需要授权时",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507556,
+          "status": "passed",
+          "title": "应该显示Approve按钮当需要授权时"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "授权流程测试"
+          ],
+          "duration": 4,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 授权流程测试 应该调用approve函数当点击Approve按钮",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507558,
+          "status": "passed",
+          "title": "应该调用approve函数当点击Approve按钮"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "授权流程测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 授权流程测试 应该显示loading状态当授权进行中",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507562,
+          "status": "passed",
+          "title": "应该显示loading状态当授权进行中"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "授权流程测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 授权流程测试 应该显示确认状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507564,
+          "status": "passed",
+          "title": "应该显示确认状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "授权流程测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 授权流程测试 应该显示已确认状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507566,
+          "status": "passed",
+          "title": "应该显示已确认状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "购买流程测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 购买流程测试 应该显示购买按钮当已授权且未购买",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507567,
+          "status": "passed",
+          "title": "应该显示购买按钮当已授权且未购买"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "购买流程测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 购买流程测试 应该调用purchaseCourse函数当点击购买按钮",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507570,
+          "status": "passed",
+          "title": "应该调用purchaseCourse函数当点击购买按钮"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "购买流程测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 购买流程测试 应该显示购买loading状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507572,
+          "status": "passed",
+          "title": "应该显示购买loading状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "购买流程测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 购买流程测试 应该显示购买确认状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507573,
+          "status": "passed",
+          "title": "应该显示购买确认状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "购买流程测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 购买流程测试 应该显示购买成功状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507575,
+          "status": "passed",
+          "title": "应该显示购买成功状态"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "按钮禁用状态测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 按钮禁用状态测试 Approve按钮应该在pending时被禁用",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507576,
+          "status": "passed",
+          "title": "Approve按钮应该在pending时被禁用"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "按钮禁用状态测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 按钮禁用状态测试 购买按钮应该在pending时被禁用",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507577,
+          "status": "passed",
+          "title": "购买按钮应该在pending时被禁用"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "边界情况测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 边界情况测试 应该处理创建者购买自己的课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507578,
+          "status": "passed",
+          "title": "应该处理创建者购买自己的课程"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 边界情况测试 应该处理已购买用户",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507580,
+          "status": "passed",
+          "title": "应该处理已购买用户"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 边界情况测试 应该处理价格为0的课程",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507581,
+          "status": "passed",
+          "title": "应该处理价格为0的课程"
+        },
+        {
+          "ancestorTitles": [
+            "CourseCard组件测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "CourseCard组件测试 边界情况测试 应该处理非常长的课程标题和描述",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507582,
+          "status": "passed",
+          "title": "应该处理非常长的课程标题和描述"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 25,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507662,
+        "loadTestEnvironmentEnd": 1757747507596,
+        "loadTestEnvironmentStart": 1757747507591,
+        "runtime": 66,
+        "setupAfterEnvEnd": 1757747507624,
+        "setupAfterEnvStart": 1757747507608,
+        "setupFilesEnd": 1757747507596,
+        "setupFilesStart": 1757747507596,
+        "slow": false,
+        "start": 1757747507596
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/hooks-useImmer.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "基本功能测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 基本功能测试 应该使用初始值初始化状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507644,
+          "status": "passed",
+          "title": "应该使用初始值初始化状态"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "基本功能测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 基本功能测试 应该支持函数形式的初始值",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507645,
+          "status": "passed",
+          "title": "应该支持函数形式的初始值"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "基本功能测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 基本功能测试 应该支持原始类型的初始值",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507648,
+          "status": "passed",
+          "title": "应该支持原始类型的初始值"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "基本功能测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 基本功能测试 应该支持数组初始值",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507648,
+          "status": "passed",
+          "title": "应该支持数组初始值"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "Draft函数更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新对象状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507649,
+          "status": "passed",
+          "title": "应该通过draft函数更新对象状态"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "Draft函数更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新嵌套对象",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507650,
+          "status": "passed",
+          "title": "应该通过draft函数更新嵌套对象"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "Draft函数更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 Draft函数更新测试 应该通过draft函数更新数组",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507651,
+          "status": "passed",
+          "title": "应该通过draft函数更新数组"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "Draft函数更新测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 Draft函数更新测试 应该通过draft函数操作复杂数据结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507652,
+          "status": "passed",
+          "title": "应该通过draft函数操作复杂数据结构"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "Draft函数更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 Draft函数更新测试 应该支持从数组中删除元素",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507652,
+          "status": "passed",
+          "title": "应该支持从数组中删除元素"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "直接值更新测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 直接值更新测试 应该支持直接值更新对象",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507653,
+          "status": "passed",
+          "title": "应该支持直接值更新对象"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "直接值更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 直接值更新测试 应该支持直接值更新原始类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507653,
+          "status": "passed",
+          "title": "应该支持直接值更新原始类型"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "直接值更新测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 直接值更新测试 应该支持直接值更新数组",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507654,
+          "status": "passed",
+          "title": "应该支持直接值更新数组"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "直接值更新测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 直接值更新测试 应该支持直接值更新为null",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507654,
+          "status": "passed",
+          "title": "应该支持直接值更新为null"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "直接值更新测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 直接值更新测试 应该支持直接值更新为undefined",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507655,
+          "status": "passed",
+          "title": "应该支持直接值更新为undefined"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "不可变性测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 不可变性测试 更新后应该返回新的引用",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507655,
+          "status": "passed",
+          "title": "更新后应该返回新的引用"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "不可变性测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 不可变性测试 嵌套对象更新后应该保持引用不变的部分",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507656,
+          "status": "passed",
+          "title": "嵌套对象更新后应该保持引用不变的部分"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "不可变性测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 不可变性测试 状态应该是冻结的",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507656,
+          "status": "passed",
+          "title": "状态应该是冻结的"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 边界情况测试 应该处理空对象",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507656,
+          "status": "passed",
+          "title": "应该处理空对象"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 边界情况测试 应该处理空数组",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507657,
+          "status": "passed",
+          "title": "应该处理空数组"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "边界情况测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 边界情况测试 应该处理复杂的嵌套更新",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507658,
+          "status": "passed",
+          "title": "应该处理复杂的嵌套更新"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "边界情况测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 边界情况测试 应该处理没有变化的draft函数",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507658,
+          "status": "passed",
+          "title": "应该处理没有变化的draft函数"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "性能测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 性能测试 updater函数应该被memoized",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507659,
+          "status": "passed",
+          "title": "updater函数应该被memoized"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "性能测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 性能测试 多次更新应该正确工作",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507660,
+          "status": "passed",
+          "title": "多次更新应该正确工作"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "TypeScript类型测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 TypeScript类型测试 应该正确推断对象类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507660,
+          "status": "passed",
+          "title": "应该正确推断对象类型"
+        },
+        {
+          "ancestorTitles": [
+            "useImmer Hook测试",
+            "TypeScript类型测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useImmer Hook测试 TypeScript类型测试 应该正确推断数组类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507661,
+          "status": "passed",
+          "title": "应该正确推断数组类型"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 3,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507731,
+        "loadTestEnvironmentEnd": 1757747507675,
+        "loadTestEnvironmentStart": 1757747507671,
+        "runtime": 55,
+        "setupAfterEnvEnd": 1757747507704,
+        "setupAfterEnvStart": 1757747507686,
+        "setupFilesEnd": 1757747507676,
+        "setupFilesStart": 1757747507676,
+        "slow": false,
+        "start": 1757747507676
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/Loading.test.tsx",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Loading组件测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Loading组件测试 应该正确渲染Loading组件",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507724,
+          "status": "passed",
+          "title": "应该正确渲染Loading组件"
+        },
+        {
+          "ancestorTitles": [
+            "Loading组件测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Loading组件测试 应该正确渲染Loading组件的DOM结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507727,
+          "status": "passed",
+          "title": "应该正确渲染Loading组件的DOM结构"
+        },
+        {
+          "ancestorTitles": [
+            "Loading组件测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Loading组件测试 应该能够多次渲染而不出错",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507729,
+          "status": "passed",
+          "title": "应该能够多次渲染而不出错"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 18,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507776,
+        "loadTestEnvironmentEnd": 1757747507742,
+        "loadTestEnvironmentStart": 1757747507738,
+        "runtime": 34,
+        "setupAfterEnvEnd": 1757747507770,
+        "setupAfterEnvStart": 1757747507755,
+        "setupFilesEnd": 1757747507742,
+        "setupFilesStart": 1757747507742,
+        "slow": false,
+        "start": 1757747507742
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/utils.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该正确格式化标准以太坊地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507773,
+          "status": "passed",
+          "title": "应该正确格式化标准以太坊地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该正确处理自定义长度",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507773,
+          "status": "passed",
+          "title": "应该正确处理自定义长度"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理没有0x前缀的地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507773,
+          "status": "passed",
+          "title": "应该处理没有0x前缀的地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理空字符串",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507773,
+          "status": "passed",
+          "title": "应该处理空字符串"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理null或undefined",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理null或undefined"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理过短的地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理过短的地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理刚好符合长度要求的地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理刚好符合长度要求的地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理极限长度地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理极限长度地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该保留原始地址的0x前缀状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该保留原始地址的0x前缀状态"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理包含大写字母的地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理包含大写字母的地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理混合大小写的地址",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该处理混合大小写的地址"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该在不同参数下正确工作",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507774,
+          "status": "passed",
+          "title": "应该在不同参数下正确工作"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理边界情况：长度参数为0",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507775,
+          "status": "passed",
+          "title": "应该处理边界情况：长度参数为0"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "formatWalletAddress"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 formatWalletAddress 应该处理边界情况：长度参数很大",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507775,
+          "status": "passed",
+          "title": "应该处理边界情况：长度参数很大"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "地址验证相关函数"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 地址验证相关函数 应该正确验证以太坊地址格式",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1757747507775,
+          "status": "passed",
+          "title": "应该正确验证以太坊地址格式"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "地址比较函数"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 地址比较函数 应该正确比较地址相等性（忽略大小写）",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507775,
+          "status": "passed",
+          "title": "应该正确比较地址相等性（忽略大小写）"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "地址处理实用函数"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 地址处理实用函数 应该正确提取地址的校验和",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507776,
+          "status": "passed",
+          "title": "应该正确提取地址的校验和"
+        },
+        {
+          "ancestorTitles": [
+            "utils工具函数测试",
+            "地址处理实用函数"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "utils工具函数测试 地址处理实用函数 应该正确标准化地址格式",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507776,
+          "status": "passed",
+          "title": "应该正确标准化地址格式"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 22,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507827,
+        "loadTestEnvironmentEnd": 1757747507790,
+        "loadTestEnvironmentStart": 1757747507785,
+        "runtime": 37,
+        "setupAfterEnvEnd": 1757747507817,
+        "setupAfterEnvStart": 1757747507800,
+        "setupFilesEnd": 1757747507790,
+        "setupFilesStart": 1757747507790,
+        "slow": false,
+        "start": 1757747507790
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/types.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "Course接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 Course接口测试 应该定义正确的Course接口结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1757747507820,
+          "status": "passed",
+          "title": "应该定义正确的Course接口结构"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "Course接口测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 Course接口测试 应该正确处理Course的不同属性类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1757747507820,
+          "status": "passed",
+          "title": "应该正确处理Course的不同属性类型"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "Course接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 Course接口测试 应该支持Course的所有必需属性",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 7,
+          "retryReasons": [],
+          "startAt": 1757747507821,
+          "status": "passed",
+          "title": "应该支持Course的所有必需属性"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "UserData接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 UserData接口测试 应该定义正确的UserData接口结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507821,
+          "status": "passed",
+          "title": "应该定义正确的UserData接口结构"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "UserData接口测试"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 UserData接口测试 应该支持空的购买课程列表",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507821,
+          "status": "passed",
+          "title": "应该支持空的购买课程列表"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "UserData接口测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 UserData接口测试 应该正确处理UserData的属性类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507823,
+          "status": "passed",
+          "title": "应该正确处理UserData的属性类型"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "UserData接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 UserData接口测试 应该支持UserData的所有必需属性",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507824,
+          "status": "passed",
+          "title": "应该支持UserData的所有必需属性"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "TokenExchangeProps接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 TokenExchangeProps接口测试 应该定义正确的TokenExchangeProps接口结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507824,
+          "status": "passed",
+          "title": "应该定义正确的TokenExchangeProps接口结构"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "TokenExchangeProps接口测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 TokenExchangeProps接口测试 应该支持零值和小数值",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507824,
+          "status": "passed",
+          "title": "应该支持零值和小数值"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "TokenExchangeProps接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 TokenExchangeProps接口测试 应该支持TokenExchangeProps的所有必需属性",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该支持TokenExchangeProps的所有必需属性"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumProvider接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumProvider接口测试 应该定义正确的EthereumProvider接口结构",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该定义正确的EthereumProvider接口结构"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumProvider接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumProvider接口测试 应该正确处理request方法",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该正确处理request方法"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumProvider接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumProvider接口测试 应该支持可选的removeListener方法",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该支持可选的removeListener方法"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumError接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumError接口测试 应该扩展Error并包含可选的code属性",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该扩展Error并包含可选的code属性"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumError接口测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumError接口测试 应该支持没有code的错误",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507825,
+          "status": "passed",
+          "title": "应该支持没有code的错误"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "EthereumError接口测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 EthereumError接口测试 应该支持常见的以太坊错误代码",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "startAt": 1757747507826,
+          "status": "passed",
+          "title": "应该支持常见的以太坊错误代码"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型兼容性和约束测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型兼容性和约束测试 应该正确处理Course和UserData之间的关系",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507826,
+          "status": "passed",
+          "title": "应该正确处理Course和UserData之间的关系"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型兼容性和约束测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型兼容性和约束测试 应该正确处理BigInt类型的计算",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507826,
+          "status": "passed",
+          "title": "应该正确处理BigInt类型的计算"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型兼容性和约束测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型兼容性和约束测试 应该正确处理地址格式验证",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507826,
+          "status": "passed",
+          "title": "应该正确处理地址格式验证"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型兼容性和约束测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型兼容性和约束测试 应该正确处理TokenExchangeProps的数值转换",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "startAt": 1757747507826,
+          "status": "passed",
+          "title": "应该正确处理TokenExchangeProps的数值转换"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型守卫函数测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型守卫函数测试 应该正确识别Course类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507827,
+          "status": "passed",
+          "title": "应该正确识别Course类型"
+        },
+        {
+          "ancestorTitles": [
+            "类型定义和接口测试",
+            "类型守卫函数测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "类型定义和接口测试 类型守卫函数测试 应该正确识别UserData类型",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507827,
+          "status": "passed",
+          "title": "应该正确识别UserData类型"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 10,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1757747507874,
+        "loadTestEnvironmentEnd": 1757747507839,
+        "loadTestEnvironmentStart": 1757747507834,
+        "runtime": 35,
+        "setupAfterEnvEnd": 1757747507867,
+        "setupAfterEnvStart": 1757747507851,
+        "setupFilesEnd": 1757747507839,
+        "setupFilesStart": 1757747507839,
+        "slow": false,
+        "start": 1757747507839
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/basic.test.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够运行基本测试",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507868,
+          "status": "passed",
+          "title": "应该能够运行基本测试"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理数字计算",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507868,
+          "status": "passed",
+          "title": "应该能够处理数字计算"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理字符串操作",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507868,
+          "status": "passed",
+          "title": "应该能够处理字符串操作"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理BigInt",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507869,
+          "status": "passed",
+          "title": "应该能够处理BigInt"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理对象",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757747507869,
+          "status": "passed",
+          "title": "应该能够处理对象"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理数组",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507869,
+          "status": "passed",
+          "title": "应该能够处理数组"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理异步操作",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507869,
+          "status": "passed",
+          "title": "应该能够处理异步操作"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够Mock函数",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757747507869,
+          "status": "passed",
+          "title": "应该能够Mock函数"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 3,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理错误",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507870,
+          "status": "passed",
+          "title": "应该能够处理错误"
+        },
+        {
+          "ancestorTitles": [
+            "基础测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "基础测试 应该能够处理条件逻辑",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757747507873,
+          "status": "passed",
+          "title": "应该能够处理条件逻辑"
+        }
+      ],
+      "failureMessage": null
+    },
     {
       "leaks": false,
       "numFailingTests": 0,
@@ -37,16 +2726,16 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1757380929461,
-        "loadTestEnvironmentEnd": 1757380929175,
-        "loadTestEnvironmentStart": 1757380928788,
-        "runtime": 285,
-        "setupAfterEnvEnd": 1757380929443,
-        "setupAfterEnvStart": 1757380929314,
-        "setupFilesEnd": 1757380929176,
-        "setupFilesStart": 1757380929176,
+        "end": 1757747507931,
+        "loadTestEnvironmentEnd": 1757747507893,
+        "loadTestEnvironmentStart": 1757747507882,
+        "runtime": 37,
+        "setupAfterEnvEnd": 1757747507925,
+        "setupAfterEnvStart": 1757747507907,
+        "setupFilesEnd": 1757747507894,
+        "setupFilesStart": 1757747507894,
         "slow": false,
-        "start": 1757380929176
+        "start": 1757747507894
       },
       "skipped": false,
       "snapshot": {
@@ -65,7 +2754,7 @@
             "核心功能测试",
             "地址工具函数"
           ],
-          "duration": 2,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -74,7 +2763,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929453,
+          "startAt": 1757747507926,
           "status": "passed",
           "title": "应该正确格式化以太坊地址"
         },
@@ -92,7 +2781,7 @@
           "location": null,
           "numPassingAsserts": 4,
           "retryReasons": [],
-          "startAt": 1757380929456,
+          "startAt": 1757747507927,
           "status": "passed",
           "title": "应该验证地址格式"
         },
@@ -110,7 +2799,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929456,
+          "startAt": 1757747507927,
           "status": "passed",
           "title": "应该正确计算代币兑换数量"
         },
@@ -119,7 +2808,7 @@
             "核心功能测试",
             "代币计算功能"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -128,7 +2817,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929456,
+          "startAt": 1757747507928,
           "status": "passed",
           "title": "应该正确计算ETH数量"
         },
@@ -146,27 +2835,9 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929457,
+          "startAt": 1757747507928,
           "status": "passed",
           "title": "应该处理BigInt计算"
-        },
-        {
-          "ancestorTitles": [
-            "核心功能测试",
-            "Web3状态管理"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "核心功能测试 Web3状态管理 应该管理钱包连接状态",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 6,
-          "retryReasons": [],
-          "startAt": 1757380929457,
-          "status": "passed",
-          "title": "应该管理钱包连接状态"
         },
         {
           "ancestorTitles": [
@@ -177,12 +2848,30 @@
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
+          "fullName": "核心功能测试 Web3状态管理 应该管理钱包连接状态",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1757747507928,
+          "status": "passed",
+          "title": "应该管理钱包连接状态"
+        },
+        {
+          "ancestorTitles": [
+            "核心功能测试",
+            "Web3状态管理"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "核心功能测试 Web3状态管理 应该管理交易状态",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 6,
           "retryReasons": [],
-          "startAt": 1757380929457,
+          "startAt": 1757747507929,
           "status": "passed",
           "title": "应该管理交易状态"
         },
@@ -200,7 +2889,7 @@
           "location": null,
           "numPassingAsserts": 4,
           "retryReasons": [],
-          "startAt": 1757380929458,
+          "startAt": 1757747507929,
           "status": "passed",
           "title": "应该创建课程对象"
         },
@@ -209,7 +2898,7 @@
             "核心功能测试",
             "课程数据处理"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -218,7 +2907,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929459,
+          "startAt": 1757747507929,
           "status": "passed",
           "title": "应该过滤活跃课程"
         },
@@ -236,7 +2925,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757380929459,
+          "startAt": 1757747507930,
           "status": "passed",
           "title": "应该处理网络错误"
         },
@@ -254,7 +2943,7 @@
           "location": null,
           "numPassingAsserts": 4,
           "retryReasons": [],
-          "startAt": 1757380929459,
+          "startAt": 1757747507930,
           "status": "passed",
           "title": "应该处理合约调用错误"
         },
@@ -272,213 +2961,9 @@
           "location": null,
           "numPassingAsserts": 4,
           "retryReasons": [],
-          "startAt": 1757380929460,
+          "startAt": 1757747507930,
           "status": "passed",
           "title": "应该验证表单输入"
-        }
-      ],
-      "failureMessage": null
-    },
-    {
-      "leaks": false,
-      "numFailingTests": 0,
-      "numPassingTests": 10,
-      "numPendingTests": 0,
-      "numTodoTests": 0,
-      "openHandles": [],
-      "perfStats": {
-        "end": 1757380929462,
-        "loadTestEnvironmentEnd": 1757380929175,
-        "loadTestEnvironmentStart": 1757380928788,
-        "runtime": 287,
-        "setupAfterEnvEnd": 1757380929444,
-        "setupAfterEnvStart": 1757380929314,
-        "setupFilesEnd": 1757380929175,
-        "setupFilesStart": 1757380929175,
-        "slow": false,
-        "start": 1757380929175
-      },
-      "skipped": false,
-      "snapshot": {
-        "added": 0,
-        "fileDeleted": false,
-        "matched": 0,
-        "unchecked": 0,
-        "uncheckedKeys": [],
-        "unmatched": 0,
-        "updated": 0
-      },
-      "testFilePath": "/Users/liuweiyuan/Documents/front-end/yideng33期/web3-education-spa/tests/unit/basic.test.ts",
-      "testResults": [
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 3,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够运行基本测试",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929451,
-          "status": "passed",
-          "title": "应该能够运行基本测试"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 2,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理数字计算",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929454,
-          "status": "passed",
-          "title": "应该能够处理数字计算"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理字符串操作",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929456,
-          "status": "passed",
-          "title": "应该能够处理字符串操作"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 1,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理BigInt",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929456,
-          "status": "passed",
-          "title": "应该能够处理BigInt"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理对象",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "startAt": 1757380929457,
-          "status": "passed",
-          "title": "应该能够处理对象"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理数组",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "startAt": 1757380929457,
-          "status": "passed",
-          "title": "应该能够处理数组"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理异步操作",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929457,
-          "status": "passed",
-          "title": "应该能够处理异步操作"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够Mock函数",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "startAt": 1757380929458,
-          "status": "passed",
-          "title": "应该能够Mock函数"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 3,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理错误",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929458,
-          "status": "passed",
-          "title": "应该能够处理错误"
-        },
-        {
-          "ancestorTitles": [
-            "基础测试"
-          ],
-          "duration": 1,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "基础测试 应该能够处理条件逻辑",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757380929461,
-          "status": "passed",
-          "title": "应该能够处理条件逻辑"
         }
       ],
       "failureMessage": null
