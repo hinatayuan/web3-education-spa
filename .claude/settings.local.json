@@ -8,7 +8,8 @@
       "Bash(npm run test:unit:*)",
       "Bash(npx jest:*)",
       "Bash(npm run test:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(npm test)"
     ],
     "deny": [],
     "ask": []
